@@ -1,0 +1,39 @@
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle{
+    width: 400px;
+    height: 400px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 10px solid white;
+    outline: 100px solid black;
+    position: relative;
+}
+
+.circle::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    z-index: -1;
+    background-color: blue;
+}
+
+.circle::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    z-index: -1;
+    background-color: blue;
+
+}
